@@ -6,13 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music player</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <button id="btn">select file</button>
+    <div class="card">
+        <div class="buttons">
+            <button class="button" id="btn">Select File</button>
+            <button class="button" id="btnF">Select Folder</button>
+        </div>
+        <img class="spinner" src="./icons8_microsoft_groove.svg" alt="music">
+        <h3 class="title"></h3>
+        <audio class="player" id="aud" controls></audio>
+    </div>
 
-    <audio id="aud" controls></audio>
 
 </body>
 <script src="./script.js"></script>
