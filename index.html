@@ -2,26 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>music player</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>juki player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./icons8_microsoft_groove.svg" type="image/x-icon" />
 </head>
 
 <body>
+    <a href="https://paakofiaidoo.tech/">By Paa-Kofi Aidoo</a>
     <div class="card">
         <div class="buttons">
             <button class="button" id="btn">Select File</button>
             <button class="button" id="btnF">Select Folder</button>
         </div>
-        <img class="spinner" src="./icons8_microsoft_groove.svg" alt="music">
+        <img class="spinner" src="./icons8_microsoft_groove.svg" alt="music" />
         <h3 class="title"></h3>
-        <audio class="player" id="aud" controls></audio>
+        <div id="mainwrap">
+            <div class="audiowrap">
+                <div class="tracks"><a id="btnPrev">&larr;</a><a id="btnNext">&rarr;</a></div>
+                <audio class="player" id="aud" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+            </div>
+        </div>
+        <div class="playlist plwrap card">
+            <img class="listBtn" src="./icons8-playlist-90.png" alt="playlist" />
+            <span class="total">/</span>
+            <div class="list plList activeList"></div>
+        </div>
     </div>
-
-
 </body>
 <script src="./script.js"></script>
 
