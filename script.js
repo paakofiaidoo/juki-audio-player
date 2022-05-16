@@ -1,3 +1,5 @@
+
+
 const btn = document.getElementById("btn");
 const btnF = document.getElementById("btnF");
 const aud = document.getElementById("aud");
@@ -12,6 +14,9 @@ const total = document.querySelector(".total");
 const folder = [];
 let f;
 let curr = 0;
+if (!window.showOpenFilePicker) {
+    title.innerText = "Browser not compatible, try using a modern browser (the latest version of any Chromium browser)";
+}
 const pickerOpts = {
     types: [
         {
